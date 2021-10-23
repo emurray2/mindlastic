@@ -9,8 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color.black.ignoresSafeArea()
+            VStack {
+                VStack {
+                    Text("Logo")
+                    .padding()
+                    .foregroundColor(Color.white)
+                    Button("Email") {
+
+                    }
+                    .padding()
+                    Button("Google") {
+
+                    }
+                    .padding()
+                    Button("Facebook") {
+
+                    }
+                    .padding()
+                    Button("Apple ID") {
+
+                    }
+                    .padding()
+                }
+                .padding(60)
+                VStack {
+                    Text("Have an account?")
+                    .padding()
+                    .foregroundColor(Color.white)
+                    Button("Log In") {
+
+                    }
+                    .padding()
+                }
+            }
+        }
     }
 }
 
