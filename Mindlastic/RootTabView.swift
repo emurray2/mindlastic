@@ -10,7 +10,7 @@ import SwiftUI
 struct RootTabView: View {
     init() {
         UITabBar.appearance().backgroundColor = UIColor(Color.mlNavy)
-        UITabBar.appearance().barTintColor = UIColor(Color.white)
+        //UITabBar.appearance().barTintColor = UIColor(Color.white)
     }
     var body: some View {
         NavigationView {

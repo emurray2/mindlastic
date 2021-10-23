@@ -13,7 +13,7 @@ extension Font {
        return Font.custom("Poppins-Black", size: size)
    }
    
-   static let mlTitle = appFont(size: 32).weight(.semibold)
+   static let mlTitle = appFont(size: 24).weight(.semibold)
    static let mlBody = appFont(size: 20).weight(.medium)
    static let mlCaption = appFont(size: 14).weight(.regular)
 }

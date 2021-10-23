@@ -10,34 +10,42 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ZStack {
-            Color.mlNavy
-                .ignoresSafeArea()
-            ScrollView {
-                Text("Welcome, name")
-                    .modifier(Title())
-                NavigationLink(destination: JournalEntryView()) {
-                    HStack {
-                        VStack {
-                            Text("New Entry")
-                                .font(.mlBody)
-                            Text("Sat Oct 23")
-                                .font(.mlCaption)
+        NavigationView {
+            ZStack {
+                Color.mlNavy
+                    .ignoresSafeArea()
+                ScrollView {
+                    Text("Welcome, name")
+                        .modifier(Title())
+                    NavigationLink(destination: JournalEntryView()) {
+                        HStack {
+                            VStack {
+                                Text("New Entry")
+                                    .font(.mlBody)
+                                Text("Sat Oct 23")
+                                    .font(.mlCaption)
+                            }
+                            Image(systemName: "square.and.pencil")
                         }
-                        Image(systemName: "square.and.pencil")
+                        .frame(maxWidth: .infinity)
+                        .modifier(Card(backgroundColor: .mlBlue))
+                        .padding()
                     }
-                    .frame(maxWidth: .infinity)
-                    .modifier(Card(backgroundColor: .mlBlue))
+                    
+                    Text("This month")
+                        .modifier(Title())
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
                 }
-                
-                Text("This month")
-                    .modifier(Title())
-                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-            }.padding()
-        }
+            }
+            .navigationBarHidden(true)
+        }.navigationBarTitle("")
+        .navigationBarHidden(true)
+
     }
 }
 
