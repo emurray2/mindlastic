@@ -11,7 +11,8 @@ import SwiftUI
 struct MindlasticApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            RootTabView()
         }
     }
 }
