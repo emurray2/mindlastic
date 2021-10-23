@@ -10,22 +10,33 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView {
-            Text("Welcome, name")
-            HStack {
-                VStack {
-                    Text("New Entry")
-                    Text("Sat Oct 23")
+        ZStack {
+            Color.mlNavy
+                .ignoresSafeArea()
+            ScrollView {
+                Text("Welcome, name")
+                    .modifier(Title())
+                NavigationLink(destination: JournalEntryView()) {
+                    HStack {
+                        VStack {
+                            Text("New Entry")
+                                .font(.mlBody)
+                            Text("Sat Oct 23")
+                                .font(.mlCaption)
+                        }
+                        Image(systemName: "square.and.pencil")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .modifier(Card(backgroundColor: .mlBlue))
                 }
-                Image(systemName: "square.and.pencil")
-            }
-            .modifier(Card())
-            
-            Text("This month")
-            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                
+                Text("This month")
+                    .modifier(Title())
+                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+            }.padding()
         }
     }
 }
@@ -37,25 +48,28 @@ struct AchievementCard: View {
         VStack {
             Image(systemName: icon)
             Text(subtitle)
-        }.modifier(Card())
+        }.modifier(Card(backgroundColor: .mlOrange))
     }
 }
 
 struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.mlTitle)
             .font(.largeTitle)
             .foregroundColor(.white)
             .padding()
+            .multilineTextAlignment(.leading)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 struct Card: ViewModifier {
+    let backgroundColor: Color
     func body(content: Content) -> some View {
         content
             .foregroundColor(.white)
             .padding()
-            .background(Color.blue)
+            .background(backgroundColor)
             .cornerRadius(10)
     }
 }

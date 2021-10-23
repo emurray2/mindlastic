@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct RootTabView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(Color.mlNavy)
+        UITabBar.appearance().barTintColor = UIColor(Color.white)
+    }
     var body: some View {
-        TabView {
-           HomeView()
-               .tabItem {
-                   Label("Home", systemImage: "house.fill")
-               }
-            AnalyticView()
-               .tabItem {
-                   Label("Charts", systemImage: "heart.text.square.fill")
-               }
+        NavigationView {
+            TabView {
+               HomeView()
+                   .tabItem {
+                       Label("Home", systemImage: "house.fill")
+                   }
+                AnalyticView()
+                   .tabItem {
+                       Label("Charts", systemImage: "heart.text.square.fill")
+                   }
+            }
         }
     }
 }
