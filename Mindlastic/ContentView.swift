@@ -16,20 +16,28 @@ struct ContentView: View {
                     Text("Logo")
                     .padding()
                     .foregroundColor(Color.white)
-                    Button("Email") {
+                    Button {
 
+                    } label: {
+                        Text("Email")
                     }
                     .padding()
-                    Button("Google") {
+                    Button {
 
+                    } label: {
+                        Text("Google")
                     }
                     .padding()
-                    Button("Facebook") {
+                    Button {
 
+                    } label: {
+                        Text("Facebook")
                     }
                     .padding()
-                    Button("Apple ID") {
+                    Button {
 
+                    } label: {
+                        Text("Apple ID")
                     }
                     .padding()
                 }
@@ -38,8 +46,10 @@ struct ContentView: View {
                     Text("Have an account?")
                     .padding()
                     .foregroundColor(Color.white)
-                    Button("Log In") {
+                    Button {
 
+                    } label: {
+                        Text("Log In")
                     }
                     .padding()
                 }
