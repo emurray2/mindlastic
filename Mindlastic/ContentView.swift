@@ -19,24 +19,46 @@ struct ContentView: View {
                     Button {
 
                     } label: {
-                        Text("Email")
+                        HStack {
+                            Image(systemName: "envelope")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(Color.white)
+                            Text("Email")
+                        }
                     }
                     .padding()
                     Button {
 
                     } label: {
-                        Text("Google")
+                        HStack {
+                            Image("google")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                            Text("Google")
+                        }
                     }
                     .padding()
                     Button {
 
                     } label: {
+                        Image("facebook")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
                         Text("Facebook")
                     }
                     .padding()
                     Button {
 
                     } label: {
+                        Image(systemName: "applelogo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(Color.white)
                         Text("Apple ID")
                     }
                     .padding()
