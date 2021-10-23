@@ -34,12 +34,18 @@ struct HomeView: View {
                     
                     Text("This month")
                         .modifier(Title())
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                    AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                        }
+                    }
                 }
             }
             .navigationBarHidden(true)
@@ -76,7 +82,10 @@ struct Card: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(.white)
-            .padding()
+            .padding(.top, 100)
+            .padding(.bottom, 100)
+            .padding(.trailing, 25)
+            .padding(.leading, 25)
             .background(backgroundColor)
             .cornerRadius(10)
     }
