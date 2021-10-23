@@ -34,6 +34,7 @@ struct HomeView: View {
                     
                     Text("This month")
                         .modifier(Title())
+                        .padding(.trailing, 260)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
