@@ -14,6 +14,9 @@ struct JournalEntryView: View {
         TextEditor(text: $fullText)
             .navigationBarHidden(false)
             .navigationTitle("Sat Oct 23")
+            .onAppear {
+                API.postJournal("hello world...?")
+            }
     }
 }
 

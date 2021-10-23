@@ -38,6 +38,7 @@
 		9600075D27248B940086A788 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9600074B27248B940086A788 /* Poppins-SemiBoldItalic.ttf */; };
 		9600075E27248B940086A788 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9600074C27248B940086A788 /* Poppins-Italic.ttf */; };
 		960007622724944C0086A788 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960007612724944C0086A788 /* JournalEntryView.swift */; };
+		960007642724C01F0086A788 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960007632724C01F0086A788 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		9600074C27248B940086A788 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		9600076027248C990086A788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		960007612724944C0086A788 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
+		960007632724C01F0086A788 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				9600076027248C990086A788 /* Info.plist */,
 				9600075F27248BAC0086A788 /* Fonts */,
 				07BAEA1D2724772700BA32C1 /* MindlasticApp.swift */,
+				960007632724C01F0086A788 /* API.swift */,
 				07BAEA1F2724772700BA32C1 /* ContentView.swift */,
 				9600073827248A6C0086A788 /* Extensions */,
 				96000730272483B50086A788 /* HomeView.swift */,
@@ -372,6 +375,7 @@
 				07BAEA202724772700BA32C1 /* ContentView.swift in Sources */,
 				960007332724883F0086A788 /* RootTabView.swift in Sources */,
 				9600073727248A670086A788 /* ML+Color.swift in Sources */,
+				960007642724C01F0086A788 /* API.swift in Sources */,
 				07BAEA1E2724772700BA32C1 /* MindlasticApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
