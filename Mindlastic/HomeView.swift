@@ -21,13 +21,19 @@ struct HomeView: View {
                         HStack {
                             VStack {
                                 Text("New Entry")
-                                    .font(.mlBody)
+                                    .font(.mlHeader)
+                                    .foregroundColor(.mlYella)
                                 Text("Sat Oct 23")
-                                    .font(.mlCaption)
+                                    .font(.mlBody)
+                                    .foregroundColor(.mlOrange)
+                                    .padding(.trailing, 80)
                             }
+                            .padding()
                             Image(systemName: "square.and.pencil")
+                                .font(Font.system(size: 75, weight: .bold, design: .default))
+                                .foregroundColor(.mlOrange)
                         }
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, maxHeight: 35)
                         .modifier(Card(backgroundColor: .mlBlue))
                         .padding()
                     }
