@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BAEA1E2724772700BA32C1 /* MindlasticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA1D2724772700BA32C1 /* MindlasticApp.swift */; };
+		07BAEA202724772700BA32C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA1F2724772700BA32C1 /* ContentView.swift */; };
+		07BAEA222724772800BA32C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BAEA212724772800BA32C1 /* Assets.xcassets */; };
+		07BAEA252724772800BA32C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BAEA242724772800BA32C1 /* Preview Assets.xcassets */; };
+		07BAEA2F2724772800BA32C1 /* MindlasticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA2E2724772800BA32C1 /* MindlasticTests.swift */; };
+		07BAEA392724772800BA32C1 /* MindlasticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA382724772800BA32C1 /* MindlasticUITests.swift */; };
+		07BAEA3B2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA3A2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07BAEA2B2724772800BA32C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BAEA122724772700BA32C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAEA192724772700BA32C1;
+			remoteInfo = Mindlastic;
+		};
+		07BAEA352724772800BA32C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BAEA122724772700BA32C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BAEA192724772700BA32C1;
+			remoteInfo = Mindlastic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07BAEA1A2724772700BA32C1 /* Mindlastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mindlastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAEA1D2724772700BA32C1 /* MindlasticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticApp.swift; sourceTree = "<group>"; };
+		07BAEA1F2724772700BA32C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07BAEA212724772800BA32C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07BAEA242724772800BA32C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07BAEA2A2724772800BA32C1 /* MindlasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindlasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAEA2E2724772800BA32C1 /* MindlasticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticTests.swift; sourceTree = "<group>"; };
+		07BAEA342724772800BA32C1 /* MindlasticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindlasticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BAEA382724772800BA32C1 /* MindlasticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticUITests.swift; sourceTree = "<group>"; };
+		07BAEA3A2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07BAEA172724772700BA32C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA272724772800BA32C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA312724772800BA32C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07BAEA112724772700BA32C1 = {
+			isa = PBXGroup;
+			children = (
+				07BAEA1C2724772700BA32C1 /* Mindlastic */,
+				07BAEA2D2724772800BA32C1 /* MindlasticTests */,
+				07BAEA372724772800BA32C1 /* MindlasticUITests */,
+				07BAEA1B2724772700BA32C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07BAEA1B2724772700BA32C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07BAEA1A2724772700BA32C1 /* Mindlastic.app */,
+				07BAEA2A2724772800BA32C1 /* MindlasticTests.xctest */,
+				07BAEA342724772800BA32C1 /* MindlasticUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07BAEA1C2724772700BA32C1 /* Mindlastic */ = {
+			isa = PBXGroup;
+			children = (
+				07BAEA1D2724772700BA32C1 /* MindlasticApp.swift */,
+				07BAEA1F2724772700BA32C1 /* ContentView.swift */,
+				07BAEA212724772800BA32C1 /* Assets.xcassets */,
+				07BAEA232724772800BA32C1 /* Preview Content */,
+			);
+			path = Mindlastic;
+			sourceTree = "<group>";
+		};
+		07BAEA232724772800BA32C1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				07BAEA242724772800BA32C1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07BAEA2D2724772800BA32C1 /* MindlasticTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BAEA2E2724772800BA32C1 /* MindlasticTests.swift */,
+			);
+			path = MindlasticTests;
+			sourceTree = "<group>";
+		};
+		07BAEA372724772800BA32C1 /* MindlasticUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07BAEA382724772800BA32C1 /* MindlasticUITests.swift */,
+				07BAEA3A2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift */,
+			);
+			path = MindlasticUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07BAEA192724772700BA32C1 /* Mindlastic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAEA3E2724772800BA32C1 /* Build configuration list for PBXNativeTarget "Mindlastic" */;
+			buildPhases = (
+				07BAEA162724772700BA32C1 /* Sources */,
+				07BAEA172724772700BA32C1 /* Frameworks */,
+				07BAEA182724772700BA32C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mindlastic;
+			productName = Mindlastic;
+			productReference = 07BAEA1A2724772700BA32C1 /* Mindlastic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07BAEA292724772800BA32C1 /* MindlasticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAEA412724772800BA32C1 /* Build configuration list for PBXNativeTarget "MindlasticTests" */;
+			buildPhases = (
+				07BAEA262724772800BA32C1 /* Sources */,
+				07BAEA272724772800BA32C1 /* Frameworks */,
+				07BAEA282724772800BA32C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BAEA2C2724772800BA32C1 /* PBXTargetDependency */,
+			);
+			name = MindlasticTests;
+			productName = MindlasticTests;
+			productReference = 07BAEA2A2724772800BA32C1 /* MindlasticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07BAEA332724772800BA32C1 /* MindlasticUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BAEA442724772800BA32C1 /* Build configuration list for PBXNativeTarget "MindlasticUITests" */;
+			buildPhases = (
+				07BAEA302724772800BA32C1 /* Sources */,
+				07BAEA312724772800BA32C1 /* Frameworks */,
+				07BAEA322724772800BA32C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BAEA362724772800BA32C1 /* PBXTargetDependency */,
+			);
+			name = MindlasticUITests;
+			productName = MindlasticUITests;
+			productReference = 07BAEA342724772800BA32C1 /* MindlasticUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07BAEA122724772700BA32C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					07BAEA192724772700BA32C1 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					07BAEA292724772800BA32C1 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 07BAEA192724772700BA32C1;
+					};
+					07BAEA332724772800BA32C1 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 07BAEA192724772700BA32C1;
+					};
+				};
+			};
+			buildConfigurationList = 07BAEA152724772700BA32C1 /* Build configuration list for PBXProject "Mindlastic" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07BAEA112724772700BA32C1;
+			productRefGroup = 07BAEA1B2724772700BA32C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07BAEA192724772700BA32C1 /* Mindlastic */,
+				07BAEA292724772800BA32C1 /* MindlasticTests */,
+				07BAEA332724772800BA32C1 /* MindlasticUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07BAEA182724772700BA32C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAEA252724772800BA32C1 /* Preview Assets.xcassets in Resources */,
+				07BAEA222724772800BA32C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA282724772800BA32C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA322724772800BA32C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07BAEA162724772700BA32C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAEA202724772700BA32C1 /* ContentView.swift in Sources */,
+				07BAEA1E2724772700BA32C1 /* MindlasticApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA262724772800BA32C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAEA2F2724772800BA32C1 /* MindlasticTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BAEA302724772800BA32C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BAEA3B2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift in Sources */,
+				07BAEA392724772800BA32C1 /* MindlasticUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07BAEA2C2724772800BA32C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAEA192724772700BA32C1 /* Mindlastic */;
+			targetProxy = 07BAEA2B2724772800BA32C1 /* PBXContainerItemProxy */;
+		};
+		07BAEA362724772800BA32C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BAEA192724772700BA32C1 /* Mindlastic */;
+			targetProxy = 07BAEA352724772800BA32C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07BAEA3C2724772800BA32C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07BAEA3D2724772800BA32C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07BAEA3F2724772800BA32C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mindlastic/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackaton.Mindlastic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07BAEA402724772800BA32C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mindlastic/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackaton.Mindlastic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07BAEA422724772800BA32C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6CV59M265C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.MindlasticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mindlastic.app/Mindlastic";
+			};
+			name = Debug;
+		};
+		07BAEA432724772800BA32C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6CV59M265C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.MindlasticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mindlastic.app/Mindlastic";
+			};
+			name = Release;
+		};
+		07BAEA452724772800BA32C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6CV59M265C;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.MindlasticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mindlastic;
+			};
+			name = Debug;
+		};
+		07BAEA462724772800BA32C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6CV59M265C;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.auraaudio.MindlasticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mindlastic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07BAEA152724772700BA32C1 /* Build configuration list for PBXProject "Mindlastic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAEA3C2724772800BA32C1 /* Debug */,
+				07BAEA3D2724772800BA32C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAEA3E2724772800BA32C1 /* Build configuration list for PBXNativeTarget "Mindlastic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAEA3F2724772800BA32C1 /* Debug */,
+				07BAEA402724772800BA32C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAEA412724772800BA32C1 /* Build configuration list for PBXNativeTarget "MindlasticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAEA422724772800BA32C1 /* Debug */,
+				07BAEA432724772800BA32C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BAEA442724772800BA32C1 /* Build configuration list for PBXNativeTarget "MindlasticUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BAEA452724772800BA32C1 /* Debug */,
+				07BAEA462724772800BA32C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07BAEA122724772700BA32C1 /* Project object */;
+}
