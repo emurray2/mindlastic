@@ -14,6 +14,9 @@
 		07BAEA2F2724772800BA32C1 /* MindlasticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA2E2724772800BA32C1 /* MindlasticTests.swift */; };
 		07BAEA392724772800BA32C1 /* MindlasticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA382724772800BA32C1 /* MindlasticUITests.swift */; };
 		07BAEA3B2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEA3A2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift */; };
+		96000731272483B50086A788 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96000730272483B50086A788 /* HomeView.swift */; };
+		960007332724883F0086A788 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960007322724883F0086A788 /* RootTabView.swift */; };
+		96000735272488D40086A788 /* AnalyticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96000734272488D40086A788 /* AnalyticView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		07BAEA342724772800BA32C1 /* MindlasticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindlasticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BAEA382724772800BA32C1 /* MindlasticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticUITests.swift; sourceTree = "<group>"; };
 		07BAEA3A2724772800BA32C1 /* MindlasticUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindlasticUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96000730272483B50086A788 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		960007322724883F0086A788 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		96000734272488D40086A788 /* AnalyticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				07BAEA1D2724772700BA32C1 /* MindlasticApp.swift */,
 				07BAEA1F2724772700BA32C1 /* ContentView.swift */,
+				96000730272483B50086A788 /* HomeView.swift */,
+				96000734272488D40086A788 /* AnalyticView.swift */,
+				960007322724883F0086A788 /* RootTabView.swift */,
 				07BAEA212724772800BA32C1 /* Assets.xcassets */,
 				07BAEA232724772800BA32C1 /* Preview Content */,
 			);
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96000735272488D40086A788 /* AnalyticView.swift in Sources */,
+				96000731272483B50086A788 /* HomeView.swift in Sources */,
 				07BAEA202724772700BA32C1 /* ContentView.swift in Sources */,
+				960007332724883F0086A788 /* RootTabView.swift in Sources */,
 				07BAEA1E2724772700BA32C1 /* MindlasticApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
