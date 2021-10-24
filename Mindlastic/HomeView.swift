@@ -9,11 +9,14 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    @State var journalEntries = [JournalEntry(as: "nothin!!")]
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.mlNavy
                     .ignoresSafeArea()
+                
                 ScrollView {
                     Text("Welcome, name")
                         .modifier(Title())
@@ -54,14 +57,26 @@ struct HomeView: View {
                     Text("Your entries")
                         .modifier(Title())
                     
+                    ForEach(journalEntries, id: \.self) { item in
+                        Text(item.text).modifier(Card(backgroundColor: Color.mlNavy))
+                    }
+                    .onAppear {
+                        APIRedux().loadJournals { entries in
+                            print(entries)
+                            self.journalEntries = entries
+                        }
+                    }
                 }
             }
             .navigationBarHidden(true)
-        }.navigationBarTitle("")
+        }
+        .navigationBarTitle("")
         .navigationBarHidden(true)
+       
 
     }
 }
+
 
 struct AchievementCard: View {
     let icon: String
