@@ -21,12 +21,11 @@ struct JournalEntryView: View {
                     .navigationBarHidden(false)
                     .navigationTitle("Sat Oct 23")
                     .padding()
-                    .onAppear {
-                        API.postJournal("hello world...?")
-                    }
                     .font(.mlBody)
                 Button {
-
+                    API.postJournal(fullText) { result in
+                        print("completed")
+                    }
                 } label: {
                     PublishButton(subtitle: "Publish", width: 150, height: 35)
                 }
