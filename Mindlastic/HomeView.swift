@@ -44,46 +44,33 @@ struct HomeView: View {
                         .modifier(Title())
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+                            AchievementCard(icon: "hands.clap.fill", subtitle: "27 Day Streak")
+                            AchievementCard(icon: "figure.walk", subtitle: "15 Min Walks")
+                            AchievementCard(icon: "bed.double.fill", subtitle: "8 Hrs Slept")
                         }
                     }.padding(.horizontal)
-                    Text("Your entries")
+                    Text("Journals")
                         .modifier(Title())
                     
                     ForEach(journalEntries, id: \.self) { item in
-                        Text(item.text).modifier(Card(backgroundColor: Color.mlNavy))
+                        NavigationLink {
+                            AnalyticView(entry: item)
+                        } label: {
+                            JournalEntryCard(subtitle: item.summary ?? "Go fuck yourself")
+                        }
                     }
                     .onAppear {
                         APIRedux().loadJournals { entries in
                             print(entries)
                             self.journalEntries = entries
                         }
-                    VStack {
-                        NavigationLink {
-                            AnalyticView()
-                        } label: {
-                            JournalEntry(icon: "pencil", subtitle: "Entry 1")
-                        }
-                        JournalEntry(icon: "pencil", subtitle: "Entry 2")
-                        JournalEntry(icon: "pencil", subtitle: "Entry 3")
-                        JournalEntry(icon: "pencil", subtitle: "Entry 4")
-                        JournalEntry(icon: "pencil", subtitle: "Entry 5")
-                    }
                 }
             }
             .navigationBarHidden(true)
+            }
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
-       
-
     }
 }
 
@@ -94,30 +81,16 @@ struct AchievementCard: View {
     var body: some View {
         VStack {
             Image(systemName: icon)
+            Spacer()
             Text(subtitle)
-        }.modifier(Card(backgroundColor: .mlOrange))
-    }
-}
-
-struct JournalStat: View {
-    var isQuote = false
-    let value: String
-    let subtitle: String
-    let color: Color
-    var width: CGFloat = 20
-    var height: CGFloat = 50
-    var body: some View {
-        VStack {
-            if isQuote {
-                Text(value)
-                .font(.mlQuote)
+                .font(.mlAchievement)
+                .multilineTextAlignment(.leading)
                 .lineLimit(3)
-            } else {
-                Text(value)
-                .font(.mlHeader)
-            }
-            Text(subtitle)
-        }.modifier(Card(backgroundColor: color, width: width, height: height))
+                .frame(alignment: .leading)
+        }
+        .frame(maxWidth: 100, minHeight: 120)
+        .modifier(Card(backgroundColor: .mlOrange))
+        .padding(0)
     }
 }
 
@@ -132,14 +105,22 @@ struct PublishButton: View {
     }
 }
 
-struct JournalEntry: View {
-    let icon: String
+struct JournalEntryCard: View {
     let subtitle: String
     var body: some View {
-        VStack {
-            Image(systemName: icon)
+        VStack(alignment: .center) {
+            HStack {
+               Text("Day")
+                    .font(.mlCaption)
+                Spacer()
+                Text("Month and year")
+                    .font(.mlCaption)
+            }
+            .frame( maxWidth: .infinity)
             Text(subtitle)
-        }.modifier(Card(backgroundColor: .mlDarkOrange, width: 150, height: 30))
+                .font(.mlBody)
+        }
+        .modifier(Card(backgroundColor: .mlDarkBlue, width: 150, height: 30))
     }
 }
 

@@ -17,5 +17,6 @@ extension Font {
     static let mlBody = appFont(size: 14).weight(.medium)
     static let mlCaption = appFont(size: 12).weight(.regular)
     static let mlHeader = appFont(size: 36).weight(.bold)
+    static let mlAchievement = appFont(size: 32).weight(.semibold)
     static let mlQuote = appFont(size: 24).weight(.bold).italic()
 }
