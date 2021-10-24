@@ -39,7 +39,6 @@ struct HomeView: View {
                     
                     Text("This month")
                         .modifier(Title())
-                        .padding(.trailing, 260)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
@@ -51,7 +50,10 @@ struct HomeView: View {
                             AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
                             AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
                         }
-                    }
+                    }.padding(.horizontal)
+                    Text("Your entries")
+                        .modifier(Title())
+                    
                 }
             }
             .navigationBarHidden(true)
@@ -78,9 +80,10 @@ struct Title: ViewModifier {
             .font(.mlTitle)
             .font(.largeTitle)
             .foregroundColor(.white)
-            .padding()
+            .padding(.horizontal)
             .multilineTextAlignment(.leading)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 struct Card: ViewModifier {
