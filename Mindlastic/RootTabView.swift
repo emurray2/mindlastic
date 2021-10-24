@@ -19,7 +19,7 @@ struct RootTabView: View {
                    .tabItem {
                        Label("Home", systemImage: "house.fill")
                    }
-                AnalyticView()
+                //AnalyticView()
                    .tabItem {
                        Label("Charts", systemImage: "heart.text.square.fill")
                    }
