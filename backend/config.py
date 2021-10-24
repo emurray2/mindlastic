@@ -47,4 +47,5 @@ def get_user_data():
     user_data.pop('_id', None)
     return flask.jsonify(user_data)
 
-app.run()
+#app.run()
+app.run(host="0.0.0.0", port=443, ssl_context=('/etc/letsencrypt/live/hackgt.garrepi.dev/fullchain.pem', '/etc/letsencrypt/live/hackgt.garrepi.dev/privkey.pem'))
