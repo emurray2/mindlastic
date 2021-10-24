@@ -8,9 +8,10 @@
 import Foundation
 
 struct API {
-    static let baseURL = URL(string: "https://hackgt.garrepi.dev:5900")!
-    static func postJournal(_ text: String) {
-        let fullURL = baseURL.appendingPathComponent("/api/user/post-journal")
+    static let baseURL = URL(string: "https://hackgt.garrepi.dev")!
+
+    static func postJournal(_ text: String, completion: @escaping((Result<Int, Error>) -> ())) {
+        let fullURL = baseURL.appendingPathComponent("/api/user/add-journal")
         var request = URLRequest(url: fullURL)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = [
@@ -26,19 +27,10 @@ struct API {
         
         URLSession.shared.uploadTask(with: request, from: data) { (responseData, response, error) in
             if let error = error {
-                print("Error making PUT request: \(error.localizedDescription)")
-                return
+                completion(.failure(error))
             }
-            
             if let responseCode = (response as? HTTPURLResponse)?.statusCode, let responseData = responseData {
-                guard responseCode == 200 else {
-                    print("Invalid response code: \(responseCode)")
-                    return
-                }
-                
-                if let responseJSONData = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments) {
-                    print("Response JSON data = \(responseJSONData)")
-                }
+                completion(.success(responseCode))
             }
         }.resume()
     }

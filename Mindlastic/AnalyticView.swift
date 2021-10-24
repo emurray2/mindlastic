@@ -14,7 +14,7 @@ struct AnalyticView: View {
         ZStack {
             Color.mlNavy
                 .ignoresSafeArea()
-            VStack {
+            ScrollView {
                 VStack {
                     Text("Sat Oct 23")
                     .font(.mlHeader)
@@ -23,14 +23,14 @@ struct AnalyticView: View {
                 }
                 VStack {
                     HStack(alignment: .top) {
-                        JournalStat(value: "52%", subtitle: "angry", color: .mlOrange, width: 50, height: 50)
-                        Spacer()
-                        JournalStat(value: "1532", subtitle: "words", color: .mlDarkOrange, width: 50, height: 50)
+                        JournalStat(value: "\(entry.sentiment.truncate(places: 3))", subtitle: "sentiment", color: .mlOrange, width: 50, height: 50)
+                        JournalStat(value: "\(entry.text.split(separator: " ").count)", subtitle: "words", color: .mlDarkOrange, width: 50, height: 50)
                     }
                     .padding(.horizontal)
-                    JournalStat(isQuote: true, value: "\"My dog died and that made me sad\"", subtitle: "summary", color: .mlDarkBlue, width: 90, height: 30)
                }
                 Text(entry.text)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
             }
         }
     }
@@ -61,5 +61,11 @@ struct JournalStat: View {
 struct AnalyticView_Preview: PreviewProvider {
     static var previews: some View {
         AnalyticView(entry: JournalEntry(as: "fggfdsafghjgdasadfgf"))
+    }
+}
+
+extension Double {
+    func truncate(places : Int)-> Double {
+        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
     }
 }
