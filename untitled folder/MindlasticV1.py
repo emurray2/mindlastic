@@ -17,36 +17,24 @@ def getGPTScore(query):
 
 
 def callGPT(query):
-    # query = "I came home to my cat purring"
-    print("query is:")
-    print(query)
     openai.api_key = os.getenv("OPENAI_API_KEY")
     temp = openai.File.create(file=open("Training.jsonl"), purpose="classifications")
-    print(temp)
-    time.sleep(15) #adjust this to be shorter probably
+    time.sleep(8) #adjust this to be shorter probably
     result = openai.Classification.create(
         file=temp.id,
         query=query,
         search_model="davinci",
         model="davinci",
-        # prompt = "this is a daily journal sentiment classifier on a scale from low to high",
         max_examples=10,
         labels = labels,
         logprobs=6,
-        # expand = ["completion"],
+        expand = ["completion"]
     )
-    print("result is: ")
-    print(result)
-
     # Load the tokenizer.
     tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
 
     # Encode the labels with extra white space prepended.
     labels_tokens = {label: tokenizer.encode(" " + label) for label in labels}
-    print(labels_tokens)
-    """Output:
-    {'Positive': [33733], 'Negative': [36183]}
-    """
 
     # Take the starting tokens for probability estimation.
     # Labels should have distinct starting tokens.
@@ -72,9 +60,20 @@ def callGPT(query):
 
     total = 0
     prob_sum = 1 - label_probs["Unknown"]
+    highest_weight = 0
+    temp_highest = ''
+    best_key = ''
+    second_best = ''
     for key in label_probs:
-        print(key)
         weight = label_probs[key]/prob_sum
+        if weight > highest_weight:
+            temp_highest = best_key
+            highest_weight = weight
+            best_key = key
+            second_best = temp_highest
+        elif weight > label_probs[second_best]:
+            second_best = key
+
         if key == "Awful":
             total += weight*1
         elif key == "Bad":
@@ -85,11 +84,10 @@ def callGPT(query):
             total += weight*4
         elif key == "Great":
             total += weight*5
-    print("combined score is:")
-    print(total)
-    return(total)
+    return_array = [total, best_key, second_best]
+    return(return_array)
 
-def main():
-    query = "I went stargazing last night, I loved it"
-    print(getGPTScore(query))
-main()
+# def main():
+#     query = "I went stargazing last night, I loved it"
+#     print(getGPTScore(query))
+# main()
