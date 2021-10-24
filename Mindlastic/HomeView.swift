@@ -19,23 +19,22 @@ struct HomeView: View {
                         .modifier(Title())
                     NavigationLink(destination: JournalEntryView()) {
                         HStack {
-                            VStack {
+                            VStack(alignment:.leading) {
                                 Text("New Entry")
-                                    .font(.mlHeader)
+                                    .font(.mlTitle)
                                     .foregroundColor(.mlYella)
                                 Text("Sat Oct 23")
                                     .font(.mlBody)
                                     .foregroundColor(.mlOrange)
-                                    .padding(.trailing, 80)
                             }
-                            .padding()
+                            Spacer()
                             Image(systemName: "square.and.pencil")
-                                .font(Font.system(size: 75, weight: .bold, design: .default))
+                                .font(Font.system(size: 50, weight: .semibold, design: .default))
                                 .foregroundColor(.mlOrange)
-                        }
+                        }.padding(.horizontal)
                         .frame(maxWidth: .infinity, maxHeight: 35)
                         .modifier(Card(backgroundColor: .mlBlue))
-                        .padding()
+                        .padding(.horizontal)
                     }
                     
                     Text("This month")
@@ -89,10 +88,8 @@ struct Card: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(.white)
-            .padding(.top, 100)
-            .padding(.bottom, 100)
-            .padding(.trailing, 25)
-            .padding(.leading, 25)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 50)
             .background(backgroundColor)
             .cornerRadius(10)
     }
