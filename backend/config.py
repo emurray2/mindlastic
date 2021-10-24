@@ -6,7 +6,7 @@ from MongodbClient import MongodbClient
 
 app = flask.Flask(__name__)
 app.config['DEBUG'] = True
-client = MongodbClient('localhost', 27017)
+client = MongodbClient('0.0.0.0', 27017)
 # uid = '6174bee2bb92fe76ef46751f'
 
 james_id = client.new_user('James')
@@ -19,16 +19,20 @@ uid = james_id
 
 @app.route('/api/user/add-journal', methods=['POST'])
 def add_journals():
-    entry = flask.request.data
+    entry = flask.request.json['text']
+    print(f'[/add-journal]: {entry}')
     # insert gtp3 call here
-    client.new_journal(uid, entry, 5, 'summary placeholder')
+    id = client.new_journal(uid, entry, 5, 'summary placeholder')
+    # todo: return id
+    return flask.jsonify({'status': 'success'})
+
 
 @app.route('/api/user/get-journal', methods=['GET'])
 def get_journals():
     uid = flask.request.args.get('uid')
     date_str = flask.request.args.get('date')  # ddmmyyyy format
     try:
-        date = datetime.strptime(date_str, '%d%m%Y')
+        date = datetime.strptime(date_str, '%d%m%Y').isoformat()
     except Exception as e:
         date = None
     cursors = client.get_journals(uid, date)
@@ -36,7 +40,9 @@ def get_journals():
     for cursor in cursors:
         journal = loads(dumps(cursor))
         journal.pop('_id', None)
+        #journal.pop('date', None)
         journals.append(journal)
+    print(journals)
     return flask.jsonify(journals)
 
 

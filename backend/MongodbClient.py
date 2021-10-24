@@ -34,6 +34,7 @@ class MongodbClient:
             filter={'_id': ObjectId(uid)},
             update= {'$push': {'journal_ids': journal_id} }
         )
+        return journal_id
 
     def get_journals(self, uid, date):
         query = {}
