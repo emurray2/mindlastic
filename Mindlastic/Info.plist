@@ -6,6 +6,8 @@
 	<string>Dark</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Poppins-Italic.ttf</string>
+		<string>Poppins-BoldItalic.ttf</string>
 		<string>Poppins-Black.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 		<string>Poppins-Medium.ttf</string>

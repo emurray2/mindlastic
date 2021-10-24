@@ -53,7 +53,17 @@ struct HomeView: View {
                     }.padding(.horizontal)
                     Text("Your entries")
                         .modifier(Title())
-                    
+                    VStack {
+                        NavigationLink {
+                            AnalyticView()
+                        } label: {
+                            JournalEntry(icon: "pencil", subtitle: "Entry 1")
+                        }
+                        JournalEntry(icon: "pencil", subtitle: "Entry 2")
+                        JournalEntry(icon: "pencil", subtitle: "Entry 3")
+                        JournalEntry(icon: "pencil", subtitle: "Entry 4")
+                        JournalEntry(icon: "pencil", subtitle: "Entry 5")
+                    }
                 }
             }
             .navigationBarHidden(true)
@@ -74,6 +84,39 @@ struct AchievementCard: View {
     }
 }
 
+struct JournalStat: View {
+    var isQuote = false
+    let value: String
+    let subtitle: String
+    let color: Color
+    var width: CGFloat = 20
+    var height: CGFloat = 50
+    var body: some View {
+        VStack {
+            if isQuote {
+                Text(value)
+                .font(.mlQuote)
+                .lineLimit(3)
+            } else {
+                Text(value)
+                .font(.mlHeader)
+            }
+            Text(subtitle)
+        }.modifier(Card(backgroundColor: color, width: width, height: height))
+    }
+}
+
+struct JournalEntry: View {
+    let icon: String
+    let subtitle: String
+    var body: some View {
+        VStack {
+            Image(systemName: icon)
+            Text(subtitle)
+        }.modifier(Card(backgroundColor: .mlDarkOrange, width: 150, height: 30))
+    }
+}
+
 struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -88,11 +131,13 @@ struct Title: ViewModifier {
 }
 struct Card: ViewModifier {
     let backgroundColor: Color
+    var width: CGFloat = 20
+    var height: CGFloat = 50
     func body(content: Content) -> some View {
         content
             .foregroundColor(.white)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 50)
+            .padding(.horizontal, width)
+            .padding(.vertical, height)
             .background(backgroundColor)
             .cornerRadius(10)
     }
