@@ -4,9 +4,6 @@ import time
 from transformers import GPT2TokenizerFast
 import numpy as np
 
-# API KEY: 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
-
-
 # Make sure the labels are formatted correctly.
 labels = ["Awful", "Bad", "Fine", "Good", "Great"]
 labels = [label.strip().lower().capitalize() for label in labels]
