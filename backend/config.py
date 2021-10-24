@@ -11,17 +11,20 @@ app.config['DEBUG'] = True
 
 @app.route('/api/user/add-journal', methods=['POST'])
 def add_journals():
-    entry = flask.request.data
+    entry = flask.request.json['text']
+    print(f'[/add-journal]: {entry}')
     # insert gtp3 call here
-    client.new_journal(uid, entry, 5, 'summary placeholder')
-    return 'Success'
+    id = client.new_journal(uid, entry)
+    # todo: return id
+    return flask.jsonify({'status': 'success'})
+
 
 @app.route('/api/user/get-journal', methods=['GET'])
 def get_journals():
     uid = flask.request.args.get('uid')
     date_str = flask.request.args.get('date')  # ddmmyyyy format
     try:
-        date = datetime.strptime(date_str, '%d%m%Y')
+        date = datetime.strptime(date_str, '%d%m%Y').isoformat()
     except Exception as e:
         date = None
     cursors = client.get_journals(uid, date)
@@ -29,7 +32,9 @@ def get_journals():
     for cursor in cursors:
         journal = loads(dumps(cursor))
         journal.pop('_id', None)
+        #journal.pop('date', None)
         journals.append(journal)
+    print(journals)
     return flask.jsonify(journals)
 
 
@@ -52,4 +57,3 @@ if __name__ == '__main__':
     client.new_journal(john_id, 'I like to code')
     uid = james_id
     app.run()
-    
