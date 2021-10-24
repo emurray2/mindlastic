@@ -26,9 +26,14 @@ struct JournalEntryView: View {
                     }
                     .font(.mlBody)
                 Button {
-
+                    
                 } label: {
-                    PublishButton(subtitle: "Publish", width: 150, height: 35)
+                    NavigationLink {
+                        HomeView()
+                    } label: {
+                        PublishButton(subtitle: "Publish", width: 150, height: 35)
+                    }
+
                 }
                 .padding(.bottom, 20)
             }

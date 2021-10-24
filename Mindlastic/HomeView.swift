@@ -44,9 +44,9 @@ struct HomeView: View {
                         .modifier(Title())
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            AchievementCard(icon: "hands.clap.fill", subtitle: "27 Day Streak")
-                            AchievementCard(icon: "figure.walk", subtitle: "15 Min Walks")
-                            AchievementCard(icon: "bed.double.fill", subtitle: "8 Hrs Slept")
+                            AchievementCard(icon: "hands.clap", subtitle: "27\nDay\nStreak", color: .mlOrange)
+                            AchievementCard(icon: "figure.walk", subtitle: "15\nMin\nWalks", color: .mlDarkOrange)
+                            AchievementCard(icon: "bed.double.fill", subtitle: "8\nHrs\nSlept", color: .mlOrange)
                         }
                     }.padding(.horizontal)
                     Text("Journals")
@@ -56,7 +56,7 @@ struct HomeView: View {
                         NavigationLink {
                             AnalyticView(entry: item)
                         } label: {
-                            JournalEntryCard(subtitle: item.summary ?? "Go fuck yourself")
+                            JournalEntryCard(subtitle: item.summary ?? "Summary not available")
                         }
                     }
                     .onAppear {
@@ -78,9 +78,12 @@ struct HomeView: View {
 struct AchievementCard: View {
     let icon: String
     let subtitle: String
+    var color: Color
     var body: some View {
         VStack {
             Image(systemName: icon)
+                .font(.mlAchievement)
+            .padding(.leading, 50)
             Spacer()
             Text(subtitle)
                 .font(.mlAchievement)
@@ -89,8 +92,7 @@ struct AchievementCard: View {
                 .frame(alignment: .leading)
         }
         .frame(maxWidth: 100, minHeight: 120)
-        .modifier(Card(backgroundColor: .mlOrange))
-        .padding(0)
+        .modifier(Card(backgroundColor: color))
     }
 }
 
@@ -109,17 +111,16 @@ struct JournalEntryCard: View {
     let subtitle: String
     var body: some View {
         VStack(alignment: .center) {
-            HStack {
-               Text("Day")
-                    .font(.mlCaption)
-                Spacer()
-                Text("Month and year")
-                    .font(.mlCaption)
-            }
+            Text("October 22nd, 9:32 am")
+                 .font(.mlDate)
+                 .foregroundColor(Color.mlYella)
+                 .lineLimit(2)
+            .padding()
             .frame( maxWidth: .infinity)
             Text(subtitle)
                 .font(.mlBody)
         }
+        .frame(maxWidth: 100, minHeight: 50)
         .modifier(Card(backgroundColor: .mlDarkBlue, width: 150, height: 30))
     }
 }
@@ -158,6 +159,6 @@ struct HomeView_Previews: PreviewProvider {
 
 struct AchievementCardView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats")
+        AchievementCard(icon: "hands.clap.fill", subtitle: "Congrats", color: .mlOrange)
     }
 }

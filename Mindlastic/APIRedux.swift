@@ -14,11 +14,11 @@ class APIRedux: ObservableObject {
         let url = APIRedux.baseURL.appendingPathComponent("/api/user/get-journal")
         URLSession.shared.dataTask(with: url) { data, response, error in
             // TODO: dont force unwrap
-            let journals = try! JSONDecoder().decode([JournalEntry].self, from: data!)
+            //let journals = try! JSONDecoder().decode([JournalEntry].self, from: data!)
             
-            print(journals)
+            //print(journals)
             DispatchQueue.main.async {
-                completion(journals)
+                //completion(journals)
             }
         }.resume()
     }
