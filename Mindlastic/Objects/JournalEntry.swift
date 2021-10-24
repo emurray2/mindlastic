@@ -29,7 +29,13 @@ struct JournalEntry: Codable, Identifiable, Hashable {
        let values = try decoder.container(keyedBy: CodingKeys.self)
         
        let convertedDate = try? values.decode(String.self, forKey: .date)
-        date = dateFormatter.date(from: convertedDate ?? "ss") ?? nil
+        if let dated = convertedDate {
+            let dateString = dated.prefix(dated.count - 3)
+            date = dateFormatter.date(from: String(dateString)) ?? nil
+        } else {
+            date = nil
+        }
+       
         
         
        id = (try? values.decode(UUID.self, forKey: .id)) ?? UUID()

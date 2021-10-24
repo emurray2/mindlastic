@@ -18,7 +18,7 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 
                 ScrollView {
-                    Text("Welcome, name")
+                    Text("Welcome, George")
                         .modifier(Title())
                     NavigationLink(destination: JournalEntryView()) {
                         HStack {
@@ -56,14 +56,14 @@ struct HomeView: View {
                         NavigationLink {
                             AnalyticView(entry: item)
                         } label: {
-                            JournalEntryCard(subtitle: item.summary ?? "Summary not available")
+                            JournalEntryCard(entry: item)
+                                .padding(.horizontal)
                         }
                     }
-                    .onAppear {
-                        APIRedux().loadJournals { entries in
-                            print(entries)
-                            self.journalEntries = entries
-                        }
+            }
+            .onAppear {
+                APIRedux().loadJournals { entries in
+                    self.journalEntries = entries
                 }
             }
             .navigationBarHidden(true)
@@ -108,20 +108,29 @@ struct PublishButton: View {
 }
 
 struct JournalEntryCard: View {
-    let subtitle: String
+    let entry: JournalEntry
+    func dateText() -> String {
+        guard let date = entry.date else {
+            return ""
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d"
+        return dateFormatter.string(from: date)
+    }
+    
     var body: some View {
-        VStack(alignment: .center) {
-            Text("October 22nd, 9:32 am")
+        VStack {
+            Text(dateText())
                  .font(.mlDate)
                  .foregroundColor(Color.mlYella)
-                 .lineLimit(2)
-            .padding()
-            .frame( maxWidth: .infinity)
-            Text(subtitle)
+            Text(entry.text)
                 .font(.mlBody)
+                .padding()
         }
-        .frame(maxWidth: 100, minHeight: 50)
-        .modifier(Card(backgroundColor: .mlDarkBlue, width: 150, height: 30))
+        .frame(maxWidth: .infinity, minHeight: 50)
+        .background(Color.mlDarkBlue)
+        .cornerRadius(10)
+        .foregroundColor(.white)
     }
 }
 

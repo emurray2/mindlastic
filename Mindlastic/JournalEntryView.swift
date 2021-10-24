@@ -12,7 +12,7 @@ struct JournalEntryView: View {
     init() {
         UITextView.appearance().backgroundColor = .clear
     }
-    @State private var fullText: String = "This is some editable text..."
+    @State private var fullText: String = ""
     var body: some View {
         ZStack {
             Color.mlNavy.ignoresSafeArea()
@@ -27,11 +27,11 @@ struct JournalEntryView: View {
                         print("completed")
                     }
                 } label: {
-                    NavigationLink {
-                        HomeView()
-                    } label: {
+                    //NavigationLink {
+                     //   HomeView()
+                    //} label: {
                         PublishButton(subtitle: "Publish", width: 150, height: 35)
-                    }
+                    //}
 
                 }
                 .padding(.bottom, 20)
