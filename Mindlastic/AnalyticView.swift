@@ -10,6 +10,25 @@ import SwiftUI
 
 struct AnalyticView: View {
     var body: some View {
-        Text("Work in progress")
+        ZStack {
+            Color.mlNavy
+                .ignoresSafeArea()
+            VStack {
+                VStack {
+                    Text("Sat Oct 23")
+                    .font(.mlHeader)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                }
+                VStack {
+                    HStack {
+                        JournalStat(value: "52%", subtitle: "angry", color: .mlOrange, width: 50, height: 50)
+                        .padding()
+                        JournalStat(value: "1532", subtitle: "words", color: .mlDarkOrange, width: 50, height: 50)
+                    }
+                    JournalStat(isQuote: true, value: "\"My dog died and that made me sad\"", subtitle: "summary", color: .mlDarkBlue, width: 90, height: 30)
+                }
+            }
+        }
     }
 }
