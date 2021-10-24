@@ -39,7 +39,7 @@ class MongodbClient:
     def get_journals(self, uid, date):
         query = {}
         if uid:
-            query['uid'] = uid
+            query['uid'] = str(uid)
         if date:
             next_day = date + datetime.timedelta(days=1)
             query['date'] = {'$gte': date, "$lte": next_day}
