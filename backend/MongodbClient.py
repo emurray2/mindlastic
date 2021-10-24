@@ -1,7 +1,6 @@
 from bson.objectid import ObjectId
 from pymongo import MongoClient
 import datetime
-from flask import jsonify
 
 class MongodbClient:
     def __init__(self, host, port):
@@ -21,7 +20,7 @@ class MongodbClient:
 
     def new_journal(self, uid, text, sentiment, summary):
         journal = {
-            "uid": uid,
+            "uid": str(uid),
             "date": datetime.datetime.today().replace(microsecond=0),
             "text": text,
             "sentiment": sentiment,
@@ -47,5 +46,3 @@ class MongodbClient:
         
     def get_user_data(self, uid):
         return self.db.users.find_one({'_id': ObjectId(uid)})
-
-# mdb = MongodbClient("localhost", 27017)

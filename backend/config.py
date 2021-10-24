@@ -1,4 +1,3 @@
-from bson.objectid import ObjectId
 from bson.json_util import loads, dumps
 import flask
 from datetime import datetime
@@ -8,8 +7,15 @@ from MongodbClient import MongodbClient
 app = flask.Flask(__name__)
 app.config['DEBUG'] = True
 client = MongodbClient('localhost', 27017)
-uid = '6174bee2bb92fe76ef46751f'
+# uid = '6174bee2bb92fe76ef46751f'
 
+james_id = client.new_user('James')
+john_id = client.new_user('John')
+noah_id = client.new_user('Noah')
+evan_id = client.new_user('Evan')
+client.new_journal(james_id, 'This is a test journal', 3, 'None')
+client.new_journal(john_id, 'I like 2 code', 4, 'code')
+uid = james_id
 
 @app.route('/api/user/add-journal', methods=['POST'])
 def add_journals():
