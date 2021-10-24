@@ -37,7 +37,7 @@ class MongodbClient:
         users = self.db.users
         users.update_one(
             filter={'_id': ObjectId(uid)},
-            update= {'$push': {'journal_ids': journal_id} }
+            update= {'$push': {'journal_ids': str(journal_id)} }
         )
         return journal_id
 
@@ -51,4 +51,8 @@ class MongodbClient:
         return self.db.journals.find(query)
         
     def get_user_data(self, uid):
-        return self.db.users.find_one({'_id': ObjectId(uid)})
+        query = {}
+        if uid:
+            query['_id'] = ObjectId(uid)
+
+        return self.db.users.find_one(query)
