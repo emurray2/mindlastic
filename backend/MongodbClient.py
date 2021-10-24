@@ -1,6 +1,8 @@
 from bson.objectid import ObjectId
 from pymongo import MongoClient
 import datetime
+# import GPT3.MindlasticV1 as gpt3
+import MindlasticV1 as gpt3
 
 class MongodbClient:
     def __init__(self, host, port):
@@ -18,14 +20,17 @@ class MongodbClient:
         result = users.insert_one(user)
         return result.inserted_id
 
-    def new_journal(self, uid, text, sentiment, summary):
+    def new_journal(self, uid, text):
         journal = {
             "uid": str(uid),
             "date": datetime.datetime.today().replace(microsecond=0),
-            "text": text,
-            "sentiment": sentiment,
-            "summary": summary
+            "text": text
+            # "sentiment": sentiment,
+            # "summary": summary
         }
+
+        sentiment = gpt3.getGPTScore(text)[0]
+        journal["sentiment"] = sentiment
 
         journals = self.db.journals
         journal_id = journals.insert_one(journal).inserted_id
