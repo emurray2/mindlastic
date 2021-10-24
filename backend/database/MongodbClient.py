@@ -38,9 +38,10 @@ class MongodbClient:
     def get_journals(self, uid, date):
         return self.db.journals.find( {
             'uid': uid,
-
-        }
-        )
+            'date.year': date.year,
+            'date.month': date.month,
+            'date.day': date.day
+        })
 
     def get_udata(self, uid):
         return self.db.users.find_one({'_uid': ObjectId(uid)})

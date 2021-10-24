@@ -1,7 +1,7 @@
 from bson.objectid import ObjectId
 import flask
-
-from database.MongodbClient import MongodbClient
+import datetime
+from database import MongodbClient
 
 app = flask.Flask(__name__)
 app.config['DEBUG'] = True
@@ -17,15 +17,25 @@ def add_journals():
     entry = request.data
     # insert gtp3 call here
     client.new_journal(uid, entry, 5, 'summary placeholder')
+    return "Placeholder"
 
-@app.route('/api/user/get-journal',methods=['GET'])
-def get_journals()
+@app.route('/api/user/get-journal', methods=['GET'])
+def get_journals():
     uid = request.args.get('uid')
-    data = request.args.get('date')
+    date_str = request.args.get('date')  # ddmmyyyy format
+    try:
+        date = date.strptime(date_str, '%d%m%Y')
+    except:
+        date = None
+    print(uid)
+    print(date_str)
+    return "Placeholder"
+    
 
 @app.route('/api/user/get-data', methods=['GET'])
-def get_user_Data():
-    uid = requests.args.get('uid')
+def get_user_data():
+    uid = request.args.get('uid')
+    return "Placeholder"
     
 
 app.run()
