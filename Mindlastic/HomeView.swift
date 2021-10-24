@@ -94,6 +94,16 @@ struct AchievementCard: View {
     }
 }
 
+struct PublishButton: View {
+    let subtitle: String
+    var width: CGFloat = 20
+    var height: CGFloat = 50
+    var body: some View {
+        VStack {
+            Text(subtitle)
+        }.modifier(Card(backgroundColor: .mlDarkBlue, width: width, height: height))
+    }
+}
 
 struct JournalEntryCard: View {
     let subtitle: String
